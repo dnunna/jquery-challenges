@@ -17,6 +17,7 @@
 
   var saveButton = $('#save-button');
   var loadButton = $('#load-button');
+  var userNote = Math.floor((Math.random() * 10000));
 
   /**
    * Gets the text from the element for you
@@ -33,4 +34,13 @@
   function setText(text) {
     return $('#save-me').val(text);
   }
+
+saveButton.click(function(){
+  localStorage.setItem(userNote, getText());
+})
+
+loadButton.click(function(){
+  setText(localStorage.getItem(userNote));
+})
+
 })();

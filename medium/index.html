@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <link type="text/css" rel="stylesheet" href="assets/stylesheets/mediumgame.css" />
   <title>JS Game Challenge</title>
   <style type="text/css">
     .hide {
@@ -18,6 +20,7 @@
   </style>
 </head>
 <body>
+  <div class="image" id="image">
   <div style="width: 700px;margin: 0 auto;">
     <h1 style="margin-bottom:5px">Hockey, JavaScript, and jQuery oh My!</h1>
     <h2 style="margin-top: 0">...the game!</h2>
@@ -30,6 +33,8 @@
       <h2>
         Team 1
       </h2>
+      <div class ="logo1" id="logo1">
+        </div>
       <div class="hits">
         SHOTS TAKEN: <span id="teamone-numshots">0</span><br>
         GOALS: <span id="teamone-numhits">0</span>
@@ -42,6 +47,8 @@
       <h2>
         Team 2
       </h2>
+      <div class ="logo2" id="logo2">
+        </div>
       <div class="hits">
         SHOTS TAKEN: <span id="teamtwo-numshots">0</span><br>
         GOALS: <span id="teamtwo-numhits">0</span>
@@ -52,6 +59,9 @@
     </div>
     <div class="clear"></div>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/javascript/medium.js"></script>
+  </div>
 </body>
+
 </html>
