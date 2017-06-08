@@ -38,11 +38,17 @@
     /**1. Any time someone clicks on the title at the top "feed template,"
      *    make the color of the "feed template" text change from black to red
      * and then from red to black when clicked again.
+     *  - Bonus Point surprise animate included
      */
     var myHeader = $(".row h1");
     console.log($(".row h1").html());
     myHeader.click(function() {
       console.log("im here");
+      headerAnimation();
+      function headerAnimation(){
+          myHeader.animate({letterSpacing: "+=45px"},"slow");
+          myHeader.animate({letterSpacing: "-=45px"},"slow",headerAnimation);
+      }
       var headerColor = myHeader.css("color");
       console.log(headerColor);
       if (headerColor == "rgb(51, 51, 51)") {
